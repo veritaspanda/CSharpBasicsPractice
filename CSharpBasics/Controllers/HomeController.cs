@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CSharpBasics.Models;
 
 namespace CSharpBasics.Controllers
 {
     public class HomeController : Controller
     {
+        public string[] daysOfWeek { get; set; }
 
-        string[] daysOfWeek = {
-                                    "Monday",
-                                    "Tuesday",
-                                    "Wednesday",
-                                    "Thursday",
-                                    "Friday",
-                                    "Saturday",
-                                    "Sunday"
-                                    };
+        //string[] daysOfWeek = {
+        //                            "Monday",
+        //                            "Tuesday",
+        //                            "Wednesday",
+        //                            "Thursday",
+        //                            "Friday",
+        //                            "Saturday",
+        //                            "Sunday"
+        //                            };
+
         public ActionResult Index()
         {
             MakeDaysPlural(daysOfWeek);
@@ -48,6 +51,7 @@ namespace CSharpBasics.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
+            //ViewBag.Message = dataReturn(1);
 
             return View();
         }
