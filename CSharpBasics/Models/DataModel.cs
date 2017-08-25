@@ -7,6 +7,9 @@ namespace CSharpBasics.Models
 {
     public class DataModel
     {
+
+        //public string[] daysOfWeek { get; set; }
+
         public string testString { get; set; }
         string[] daysOfWeek = {
                                     "Monday",
@@ -24,5 +27,19 @@ namespace CSharpBasics.Models
             returnData = daysOfWeek[dayVal];
             return returnData;
         }
+
+        public string ProcessName { get; set; }
+
+        public string ProcessID { get; set; }
+
+        public string ProcessResponding { get; set; }
+
+        public string ProcessSessionID { get; set; }
+
+        public DateTime ProcessStartTime { get; set; }
+
+        public string WorkingSet { get; set; }
+
+        public string ProcessTreads { get; set; }
     }
 }
