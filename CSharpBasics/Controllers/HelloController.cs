@@ -7,12 +7,18 @@ using System.Web.Routing;
 
 namespace CSharpBasics.Controllers
 {
-    public class HelloController : IController
+    public class HelloController : Controller
     {
-        public void Execute(RequestContext requestContext)
+
+        public string SayHello()
         {
-            requestContext.HttpContext.Response.Write("Hello, World");
-            //throw new NotImplementedException();
+            return "Hello, World! v2.0";
         }
+
+        //To use the below, change 'Controller' to 'IController and remove the Action call from SayHello MapRoute
+        //public void Execute(RequestContext requestContext)
+        //{
+        //    requestContext.HttpContext.Response.Write("Hello, World");
+        //}
     }
 }

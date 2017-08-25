@@ -21,7 +21,7 @@ namespace CSharpBasics
             routes.MapRoute(
                 name: "SayHello",
                 url: "Hello/",
-                defaults: new { controller = "Hello"}
+                defaults: new { controller = "Hello", action = "SayHello"}
                 );
 
             // --http://localhost/Process/
