@@ -17,6 +17,13 @@ namespace CSharpBasics
             // --http://localhost/scriptresource.axd/foo
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // --http://localhost/Hello
+            routes.MapRoute(
+                name: "SayHello",
+                url: "Hello/",
+                defaults: new { controller = "Hello"}
+                );
+
             // --http://localhost/Process/
             routes.MapRoute(
                 name: "Process",

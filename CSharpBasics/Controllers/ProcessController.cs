@@ -34,7 +34,7 @@ namespace CSharpBasics.Controllers
             var processID = Process.GetProcessById(id).Id.ToString();
             var processRespond = Process.GetProcessById(id).Responding.ToString();
             var processSessionID = Process.GetProcessById(id).SessionId.ToString();
-            var processStart = Process.GetProcessById(id).StartTime;
+            //var processStart =  Process.GetProcessById(id).StartTime;
             //var processThreads = Process.GetProcessById(id).Threads.ToString();
             var workingSet = Process.GetProcessById(id).WorkingSet64.ToString();
 
@@ -42,14 +42,14 @@ namespace CSharpBasics.Controllers
             newProcess.ProcessID = processID.ToString();
             newProcess.ProcessResponding = processRespond.ToString();
             newProcess.ProcessSessionID = processSessionID.ToString();
-            newProcess.ProcessStartTime = processStart;
+            //newProcess.ProcessStartTime = processStart;
             //newProcess.ProcessTreads = processThreads.ToString();
             newProcess.WorkingSet = workingSet.ToString();
             ViewBag.ProcessName = "Process Name: " + newProcess.ProcessName;
             ViewBag.ProcessID = "Process ID: " + newProcess.ProcessID;
             ViewBag.ProcessResponding = "Process Responding: " + newProcess.ProcessResponding;
             ViewBag.ProcessSessionID = "Process Session ID: " + newProcess.ProcessSessionID;
-            ViewBag.ProcessStart = "Process Start: " + newProcess.ProcessStartTime.ToString();
+            //ViewBag.ProcessStart = "Process Start: " + newProcess.ProcessStartTime.ToString();
             //ViewBag.ProcessThreads = "Process Threads: " + newProcess.ProcessTreads;
             ViewBag.ProcessWorkingSet = "Process Working Set: " + newProcess.WorkingSet.ToString();
 
